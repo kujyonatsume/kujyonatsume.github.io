@@ -3,7 +3,6 @@
 * @version 2.4
 * @description 由一個很閒的DC廢人製作
 * @author 夏目#2001
-* https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css
 */
 
 :root {
@@ -15,7 +14,7 @@
     --border: 4px solid #ffffffA0;
 
     --theme-background-image: url("https://media.discordapp.net/attachments/1028156483847847946/1070313086751363112/ayame_background.png");
-    --theme-transparency: var(--normal);
+    --theme-transparency: #00000060;
     --replyfromcolor: #00000010;
 
     --home-icon-image: url('https://media.discordapp.net/attachments/1028156483847847946/1045978830873047060/home_icon.jpg');
@@ -24,10 +23,11 @@
 
     --small-popout-image: url('https://media.discordapp.net/attachments/1028156483847847946/1070312867217289246/ayame_small_user_pop.png');
     --small-popout-transparency: #00000099;
+    --small-popout-size: cover;
     
     --big-popout-image: url('https://media.discordapp.net/attachments/1028156483847847946/1070314453121384520/ayame_big_user_pop.png');
-    --big-popout-transparency: #00000099;
     --big-popout-position: 50%;
+    --big-popout-size: cover;
 
     --server-listing-width: 72px;
     --font-size: 100%;
@@ -149,7 +149,7 @@
     background-repeat: no-repeat;
     background-position: var(--big-popout-position);
     background-image: var(--big-popout-image);
-    background-size: cover;
+    background-size: var(--big-popout-size);
 }
 
 .userPopoutInner-1hXSeY.userProfileInner-3F03PX.userProfileInnerThemedWithBanner-2624Yx {
@@ -159,7 +159,7 @@
 .userPopoutInner-1hXSeY.userProfileInner-3F03PX {
     background-color: var(--small-popout-transparency);
     background-image: var(--small-popout-image);
-    background-size: cover;
+    background-size: var(--small-popout-size);
 }
 
 .userProfileInner-3F03PX:before {
