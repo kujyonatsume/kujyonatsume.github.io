@@ -1,0 +1,80 @@
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+    $(document).ready(() => {
+        $('#avatar').on('change', e => {
+            $('.avatar').attr('src', $('#avatar').val())
+        })
+        $('#username').on('change', e => {
+            $('.username').text($('#username').val())
+        })
+        $('#timestamp').on('change', e => {
+            $('.timestamp').text($('#timestamp').val())
+        })
+        $('#content').on('change', e => {
+            $('.content').text($('#content').val())
+        })
+    })
+</script>
+<div style="padding-left: 60px;">
+    <img class="avatar" src="">
+    <h3 style="margin: 0px;">
+        <span class="username">username</span>
+        <span class="timestamp">timestamp</span>
+    </h3>
+    <span class="content">content</span>
+</div>
+
+<div style="padding-top: 50px;">
+    <div>avatar: <input id="avatar" type="text"> </div>
+    <div>username: <input id="username" type="text"> </div>
+    <div>timestamp: <input id="timestamp" type="text"> </div>
+    <div>content: <input id="content" type="text"> </div>
+</div>
+
+<style>
+    @font-face {
+        font-family: 'gg sans';
+        font-style: normal;
+        font-weight: normal;
+        src: local('gg sans Medium'), url('gg sans Medium.woff') format('woff')
+    }
+
+    :root {
+        --username-color: rgb(200, 222, 254);
+    }
+
+    body {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        font-family: "gg sans", "Microsoft JhengHei", "微軟正黑體", "Microsoft JhengHei UI", "Microsoft YaHei", "微軟雅黑", "宋体", "SimSun", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: white;
+        background: hsl(223 calc(1 *6.7%) 20.6% /1);
+    }
+
+    .timestamp {
+        margin-left: 4px;
+        color: hsl(214 8.1% 61.2%);
+        display: inline-block;
+        height: 1.25rem;
+        font-weight: 500;
+        font-size: 0.75rem;
+        line-height: 1.375rem;
+    }
+
+    .username {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.375rem;
+        color: var(--username-color);
+    }
+
+    .avatar {
+        position: absolute;
+        left: 16px;
+        margin-top: 4px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+</style>
